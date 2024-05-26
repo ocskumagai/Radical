@@ -1,0 +1,266 @@
+body {
+  font-family: "Noto Serif JP", serif;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #111111;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.visible {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
+/* header */
+#header .btn-gNav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 24px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+#header .btn-gNav span {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #f8f5f5;
+  border-radius: 10px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+#header .btn-gNav span:nth-child(1) {
+  top: 0;
+}
+
+#header .btn-gNav span:nth-child(2) {
+  top: 10px;
+}
+
+#header .btn-gNav span:nth-child(3) {
+  top: 20px;
+}
+
+#header .btn-gNav.open span:nth-child(1) {
+  background: #ffffff;
+  top: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#header .btn-gNav.open span:nth-child(2),
+#header .btn-gNav.open span:nth-child(3) {
+  top: 6px;
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#header .btn-gNav {
+  display: none;
+}
+
+#header nav {
+  border: 5px solid orange;
+}
+
+#header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px 20px 20px;
+}
+
+/* mainvisual */
+
+#mainvisual {
+  width: 100%;
+}
+
+#mainvisual img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 80px;
+}
+
+/* news */
+
+#news .text-container {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* concept */
+#concept {
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(214, 187, 138);
+  margin-bottom: 80px;
+}
+
+#concept h2 {
+  margin-bottom: 80px;
+}
+
+#concept .concept-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#concept .concept-container img {
+  border-radius: 50%;
+  width: 30%;
+}
+
+/* ranking */
+
+#ranking {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+#ranking h1 {
+  margin-bottom: 30px;
+}
+
+#ranking .ranking-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#ranking .ranking-container li img {
+  width: 284px;
+  height: 195px;
+}
+
+/* recomend */
+#recomend {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+#recomend h1 {
+  margin-bottom: 30px;
+}
+
+#recomend img {
+  margin-bottom: 30px;
+}
+
+/* about */
+#about {
+  text-align: center;
+  background-color: rgb(179, 179, 179);
+  padding: 80px;
+}
+
+#about .about-container .company-name {
+  margin-bottom: 30px;
+}
+
+#about .about-container .business-hours {
+  margin-bottom: 20px;
+}
+
+#about .email {
+  padding: 30px 0;
+}
+
+/* footer */
+
+#footer {
+  text-align: center;
+  background-color: orange;
+}
+
+@media screen and (max-width: 886px) {
+  #header {
+    position: fixed;
+    top: 0;
+    right: -200%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  #header .btn-gNav {
+    display: block;
+  }
+
+  #header.open {
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+  }
+  #header nav {
+    padding: 0;
+    margin-top: 100px;
+    border: none;
+  }
+
+  #header nav ul {
+    flex-direction: column;
+  }
+
+  #header nav ul li {
+    padding: 15px;
+  }
+  #header nav ul li a {
+    color: white;
+  }
+
+  #concept .concept-container.wrapper {
+    padding: 0;
+  }
+
+  #concept .concept-container {
+    flex-direction: column;
+  }
+
+  #concept .concept-container img {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  #ranking .ranking-container {
+    flex-direction: column;
+  }
+
+  #ranking .ranking-container li img {
+    width: 100%;
+    height: 300px;
+  }
+
+  #ranking .ranking-container li {
+    margin-bottom: 30px;
+  }
+
+  #recomend img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
