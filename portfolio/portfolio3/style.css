@@ -1,0 +1,274 @@
+body {
+  font-family: "Noto Serif JP", serif;
+  color: #fff;
+  background-color: black;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+/* header */
+#header {
+  /* バックグラウンドに画像を設置 */
+  background-image: url(./img/foods/lantern-7004643_1920.jpg);
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  text-align: right;
+  /* 親要素に対して相対値を設定 */
+  position: relative;
+}
+
+#header .container .nav {
+  display: inline-block;
+  display: flex;
+  /* flexで上を基準に配置 */
+  align-items: flex-start;
+}
+
+#header .container li {
+  /* 縦文字にする */
+  writing-mode: vertical-rl;
+  padding-left: 25px;
+}
+#header .container .tel {
+  margin-bottom: 50px;
+}
+
+/* concept */
+
+#concept {
+  background-color: rgb(78, 76, 76);
+  height: 400px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#concept .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#concept .wrapper .concept-container {
+  display: inline-block;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 100px;
+  height: 190px;
+}
+
+#concept .wrapper .concept-container h2 {
+  writing-mode: vertical-rl;
+  padding-left: 60px;
+}
+
+#concept .wrapper .concept-container .title {
+  writing-mode: vertical-rl;
+  padding-left: 60px;
+  letter-spacing: 0.5rem;
+}
+
+#concept .wrapper .concept-container p {
+  writing-mode: vertical-rl;
+  /* 英字も縦向きに変更 */
+  text-orientation: upright;
+  /* 文字の間隔を変更 */
+  letter-spacing: 0.4em;
+}
+
+/* recomend */
+#recomend {
+  background-color: black;
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* recomend-container1 */
+#recomend .recomend-container1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#recomend .recomend-container1 img {
+  width: 50%;
+}
+#recomend .recomend-container1 .text-container {
+  width: 50%;
+  line-height: 3rem;
+}
+#recomend .recomend-container1 .text-container h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+/* recomend-container2 */
+#recomend .recomend-container2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#recomend .recomend-container2 img {
+  width: 50%;
+}
+#recomend .recomend-container2 .text-container {
+  width: 50%;
+  line-height: 3rem;
+  text-align: right;
+}
+#recomend .recomend-container2 .text-container h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* atmosphere */
+
+#atmosphere {
+  text-align: center;
+  background-color: black;
+  padding-bottom: 15px;
+}
+
+#atmosphere .wrapper img {
+  margin-bottom: 30px;
+}
+#atmosphere .wrapper h2 {
+  padding-bottom: 20px;
+}
+
+/* company */
+
+#company {
+  background-color: rgb(78, 76, 76);
+}
+
+#company .wrapper .about {
+  width: 100%;
+  text-align: center;
+}
+
+#company .wrapper .company-container {
+  padding: 0 250px;
+}
+
+#company .company-container dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#company .company-container dt {
+  width: 25%;
+  padding: 15px;
+  font-weight: bold;
+}
+
+#company .company-container dd {
+  width: 75%;
+  padding: 15px;
+}
+
+/* footer */
+#footer {
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .wrapper {
+    padding: 15px 0;
+  }
+  #concept {
+    display: none;
+  }
+
+  #recomend .recomend-container1 {
+    flex-direction: column;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  #recomend .recomend-container1 img {
+    width: 100%;
+    order: 1;
+    padding-bottom: 30px;
+  }
+  #recomend .recomend-container1 .text-container {
+    width: 100%;
+    line-height: 2rem;
+    order: 2;
+  }
+  #recomend .recomend-container1 .text-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* recomend-container2 */
+  #recomend .recomend-container2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #recomend .recomend-container2 img {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  #recomend .recomend-container2 .text-container {
+    width: 100%;
+    line-height: 2rem;
+    text-align: center;
+  }
+  #recomend .recomend-container2 .text-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #atmosphere {
+    text-align: center;
+    background-color: black;
+    padding-bottom: 15px;
+  }
+
+  #atmosphere .wrapper img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #atmosphere .wrapper h2 {
+    padding-bottom: 20px;
+  }
+
+  #company .wrapper .company-container {
+    padding: 0;
+  }
+
+  #company .company-container dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #company .company-container dt {
+    width: 25%;
+    padding: 15px;
+    font-weight: bold;
+  }
+
+  #company .company-container dd {
+    width: 75%;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,23 @@
+body {
+  /* -ms-writing-mode: tb-rl; */
+  writing-mode: vertical-rl;
+  padding: 30px;
+  line-height: 1.4;
+}
+div {
+  margin-left: 30px;
+}
+h2 {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-left: 18px;
+}
+.upright {
+  text-orientation: upright;
+  height: 300px;
+}
+
+.sideways {
+  -webkit-text-orientation: sideways;
+  text-orientation: sideways;
+}
